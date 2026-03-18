@@ -1,0 +1,10 @@
+name: No permission control
+
+on: push
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print hello
+              run: echo "Hello"
