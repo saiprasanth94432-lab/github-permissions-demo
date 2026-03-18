@@ -2,9 +2,12 @@ name: No permission control
 
 on: push
 
+permissions:
+    contents: read
 jobs:
+
     test:
         runs-on: ubuntu-latest
         steps:
             - name: Print hello
-              run: echo "Hello"
+              run: echo "Hello Secure"
