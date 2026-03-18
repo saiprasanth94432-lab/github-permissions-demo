@@ -3,7 +3,7 @@ name: No permission control
 on: push
 
 permissions:
-    contents: read
+    contents: write
 jobs:
 
     test:
@@ -11,10 +11,12 @@ jobs:
         steps:
             - name: Get Code
               uses: actions/checkout@v4
-            - name: Try to push
+            - name: push change 
               run: |
-                git config --global user.name "test"
-                git config --global user.email "test@test.com"
-                git commit --allow-empty -m "test commit"
+                echo "update" >> file.txt
+                git config --global user.name "bot"
+                git config --global user.email "bot@bot.com"
+                git add .
+                git commit -m "auto update"
                 git push
            
