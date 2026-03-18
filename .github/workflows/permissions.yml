@@ -2,8 +2,7 @@ name: No permission control
 
 on: push
 
-permissions:
-    contents: write
+permissions: {}
 jobs:
 
     test:
